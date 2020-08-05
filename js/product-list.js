@@ -13,3 +13,9 @@ this.deletePD = function (id) {
     this.arr.splice(+index, 1);
   }
 };
+EmployeeList.prototype.updatePD = function (empl) {
+  var index = this.findIndexPD(empl.id);
+  if (index !== -1) {
+    this.arr[index] = empl;
+  }
+};

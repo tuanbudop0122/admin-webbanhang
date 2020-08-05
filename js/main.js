@@ -47,6 +47,30 @@ function deletePD(id) {
       console.log(err);
     });
 }
+const addPD = function () {
+  const newPD = new Product(
+    id,
+    name,
+    image,
+    description,
+    price,
+    inventory,
+    rating,
+    type
+  );
+  axios({
+    method: "POST",
+    url: "https://5f1d4b9f39d95a0016953dc8.mockapi.io/api/PRODUCTS",
+    data: newPD,
+  })
+    .then(function (res) {
+      console.log(res);
+      fetchPD();
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+};
 const fetchPD = function () {
   axios({
     url: "https://5f1d4b9f39d95a0016953dc8.mockapi.io/api/PRODUCTS",

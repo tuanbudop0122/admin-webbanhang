@@ -28,7 +28,6 @@ const renderPD = function (list = proDuct.arr) {
     <td>${list[i].type}</td>
     <td>
     <div class="btn-group"> <button type="button" class="btn btn-primary" onclick="editProduct(${list[i].id})">Sửa</button>
-    <div class="btn-group"> <button type="button" class="btn btn-primary">Sửa</button>
     <button type="button" class="btn btn-danger" onclick="deletePD(${list[i].id})">Xóa</button></div>
    
   </td>
@@ -119,7 +118,7 @@ function editProduct(id) {
   getEle("btnAdd").style.display = "none";
   getEle("btnUpdate").style.display = "block";
   getEle("btnCancle").style.display = "block";
-  getEle("idProduct").setAttribute("disabled", true); 
+  getEle("idProduct").setAttribute("disabled", true);
   var pd = proDuct.getPDById(id);
   getEle("idProduct").value = pd.id;
   getEle("idImage").value = pd.image;
@@ -137,7 +136,8 @@ function cancle() {
   getEle("btnUpdate").style.display = "none";
   getEle("btnCancle").style.display = "none";
   getEle("formProDuct").reset();
-  getEle("idProduct").removeAttribute("disabled"); 
+  getEle("idProduct").removeAttribute("disabled");
+}
 //Update
 function updatePD() {
   var id = getEle("idProduct").value;

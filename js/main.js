@@ -1,11 +1,5 @@
 var proDuct = new ProductList();
 var Validation = new Validation();
-function ProductList() {
-  this.arr = [];
-  this.addPD = function (pd) {
-    this.arr.push(pd);
-  };
-}
 
 const renderPD = function (list = proDuct.arr) {
   var htmlContent = "";

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>ADMIN</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -23,6 +23,124 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <div class="container">
+      <h2 class="text-center">QUẢN LÝ SẢN PHẨM</h2>
+      <div class="col-12">
+        <form class="border p-2 rounded" id="formProDuct">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="idProduct">ID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idProduct"
+                  placeholder="ID sản phẩm"
+                  required
+                />
+                <span id="idthongbao"></span>
+              </div>
+              <div class="form-group">
+                <label for="image">Hình ảnh:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idImage"
+                  placeholder="Link hình ảnh"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="name">Giá:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idPrice"
+                  placeholder="Nhập giá"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="description">Tồn kho:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idTonkho"
+                  placeholder="Nhập số lượng tồn kho"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="producer">Tên sản phẩm:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nameProduct"
+                  placeholder="Nhập tên sản phẩm"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="price">Mô tả:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idMota"
+                  placeholder="Nhập mô tả"
+                />
+              </div>
+              <div class="form-group">
+                <label for="description">Loại:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idType"
+                  placeholder="Nhập loại"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="description">Rating:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idRating"
+                  placeholder="Nhập rating"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center mt-4">
+          <div class="form-group">
+            <button id="btnAdd" class="btn btn-primary" onclick="addProduct()">
+              Thêm sản phẩm
+            </button>
+            <button
+              id="btnUpdate"
+              class="btn btn-success"
+              style="display: none;"
+              onclick="updatePD()"
+            >
+              Cập Nhật
+            </button>
+            <button
+              id="btnCancle"
+              class="btn btn-warning"
+              style="display: none;"
+              onclick="cancle()"
+            >
+              Hủy Bỏ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -43,29 +161,26 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>IMG</th>
-                <th>description</th>
-                <th>price</th>
-                <th>inventory</th>
-                <th>rating</th>
-                <th>type</th>
-                <th>act</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Inventory</th>
+                <th>Rating</th>
+                <th>Type</th>
+                <th>Act</th>
               </tr>
             </thead>
             <tbody id="tbodyPD">
               <tr>
                 <td scope="row"></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td><div></div></td>
+                <td><div></div></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
-          <button type="button" class="btn btn-primary" onclick="addPD();">
-            Thêm sản phẩm
-          </button>
         </div>
       </div>
     </div>
@@ -83,6 +198,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/product.js"></script>
+    <script src="./js/product-list.js"></script>
+    <script src="./js/Validation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
     <script src="./js/main.js"></script>

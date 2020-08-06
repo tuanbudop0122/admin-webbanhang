@@ -1,14 +1,11 @@
 var proDuct = new ProductList();
 var Validation = new Validation();
-<<<<<<< HEAD
-=======
 function ProductList() {
   this.arr = [];
   this.addPD = function (pd) {
     this.arr.push(pd);
   };
 }
->>>>>>> 1260f4c1866cfae530b979b47bc63e340f99b905
 
 const renderPD = function (list = proDuct.arr) {
   var htmlContent = "";
@@ -30,11 +27,8 @@ const renderPD = function (list = proDuct.arr) {
     <td>${list[i].rating}</td>
     <td>${list[i].type}</td>
     <td>
-<<<<<<< HEAD
     <div class="btn-group"> <button type="button" class="btn btn-primary" onclick="editProduct(${list[i].id})">Sửa</button>
-=======
     <div class="btn-group"> <button type="button" class="btn btn-primary">Sửa</button>
->>>>>>> 1260f4c1866cfae530b979b47bc63e340f99b905
     <button type="button" class="btn btn-danger" onclick="deletePD(${list[i].id})">Xóa</button></div>
    
   </td>
@@ -119,7 +113,6 @@ const addProduct = function () {
       console.log(...err);
     });
 };
-<<<<<<< HEAD
 // Edit Product
 
 function editProduct(id) {
@@ -178,5 +171,3 @@ function updatePD() {
       console.log(err);
     });
 }
-=======
->>>>>>> 1260f4c1866cfae530b979b47bc63e340f99b905
